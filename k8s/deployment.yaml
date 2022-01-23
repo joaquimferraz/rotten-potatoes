@@ -78,7 +78,7 @@ spec:
   - port: 80
     targetPort: 5000 #Recurso para esconder a porta do banco
     nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
 
 
 
