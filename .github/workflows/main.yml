@@ -16,8 +16,8 @@ jobs:
       - name: Docker Login
         uses: docker/login-action@v1.12.0
         with:
-          username: ${{secrets.DOCKERHUB_USER}}				# optional ARMAZENAR no SECRETS do github
-          password: ${{secrets.DOCKERHUB_PWD}}				# optional ARMAZENAR no SECRETS do github
+          username: ${{secrets.DOCKERHUB_USER}}
+          password: ${{secrets.DOCKERHUB_PWD}}
 
       - name: Docker Build and push
         uses: docker/build-push-action@v2.7.0
