@@ -21,13 +21,15 @@ jobs:
           username: ${{secrets.DOCKERHUB_USER}}				# optional ARMAZENAR no SECRETS do github
           password: ${{secrets.DOCKERHUB_PWD}}				# optional ARMAZENAR no SECRETS do github
 
-- name: Build and push Docker images
-  uses: docker/build-push-action@v2.7.0
-  with:
-    context: # optional
-    file: # optional
-    push: # optional, default is false
-
+			- name: Docker Build and push
+        uses: docker/build-push-action@v2.7.0
+        with:
+          context: ./src
+          file: ./src/Dockerfile
+          push: true
+					tags: |
+					joaquimferraz/rotten-potatoes:latest
+					joaquimferraz/rotten-potatoes:{{ github.run_number }} #Usar variavel para a versão
 
 
 
