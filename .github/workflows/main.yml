@@ -8,6 +8,7 @@ on:
 
 jobs:
   CI:
+    
     runs-on: ubuntu-latest
     
     steps:
@@ -29,6 +30,8 @@ jobs:
             joaquimferraz/rotten-potatoes:latest
             joaquimferraz/rotten-potatoes:${{ github.run_number }}
   CD:
+  
+    needs: [CI]
     runs-on: ubuntu-latest
     
     steps:
