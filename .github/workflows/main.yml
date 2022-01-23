@@ -27,7 +27,7 @@ jobs:
           push: true
           tags: |
             joaquimferraz/rotten-potatoes:latest
-            joaquimferraz/rotten-potatoes:${{ github.run_number }} #Usar variavel para a versão
+            joaquimferraz/rotten-potatoes:${{ github.run_number }}
   CD:
     runs-on: ubuntu-latest
     
