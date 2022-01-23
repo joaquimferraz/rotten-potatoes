@@ -27,9 +27,8 @@ jobs:
           push: true
           tags: |
             joaquimferraz/rotten-potatoes:latest
-            joaquimferraz/rotten-potatoes:{{ github.run_number }} #Usar variavel para a versão
+            joaquimferraz/rotten-potatoes:${{ github.run_number }}
 
- 
       - name: Run a one-line script
         run: echo Hello, world!
 
